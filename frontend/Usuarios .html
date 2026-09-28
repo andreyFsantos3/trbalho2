@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Controle de Ferramentas</title>
+
+    <link rel="stylesheet" href="Usuarios.css">
+</head>
+
+<body>
+
+      <aside class="sidebar">
+
+        <div class="logo">
+            <div class="logo-icon">🔧</div>
+
+            <div>
+                <h2>Controle</h2>
+                <span>de Ferramentas</span>
+            </div>
+        </div>
+
+
+        <nav class="menu">
+
+            <a href="InicialFerramenta.html" class="menu-item active">
+                Pagina inicial
+            </a>
+
+            <a href="Usuarios .html" class="menu-item">
+                Usuários
+            </a>
+
+            <a href="ferramentas.html" class="menu-item">
+                Ferramentas
+            </a>
+
+            <a href="Emprestimo.html" class="menu-item">
+                
+                Empréstimos
+            </a>
+
+        </nav>
+
+
+    </aside>
+
+
+    
+    <main class="main">
+
+        
+        <header class="topbar">
+
+            <div>
+                <h1>Usuários</h1>
+                <p>Gerenciamneto de usuário</p>
+            </div>
+
+            <div class="user-info">
+                <div class="user-icon">👤</div>
+
+                <div>
+                    <strong>Administrador</strong>
+                    <small>Usuário do sistema</small>
+                </div>
+            </div>
+
+        </header>
+        <section class="user-cards">
+            <div class="user-card">
+                <div>
+                    <span>total de usuários</span>
+                    <strong id="totalUsuarios"></strong>
+                    <small>usuário cadastrados</small>
+                </div>
+            </div>
+        </section>
+        <section class="user-painel">
+            <div class="user-header">
+                <div>
+                    <h2>
+                        Lista de usuário 
+                    </h2>
+                    <p>
+                        Usuário cadastraados no sistema
+                    </p>
+                </div>
+                <button class="botão-primeiro" onclick="abriUmNovoCadastro()">
+                    + novo usuário
+                </button>
+            </div>
+            <div class="pesquisa">
+                <input type="text" id="campoPesquisaUsuario" placeholder="pesquisar por nome, email ou departamento" onkeyup= "pesquisarUsuario()">
+            </div>
+            <div class="tabela-principal">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>Nome</th>
+                            <th>E-mail</th>
+                            <th>Departamento</th>
+                        </tr>
+                    </thead>
+                    <tbody id="listaUsuario">
+                    </tbody>
+                </table>
+
+            </div>
+        </section>
+        <div 
+        id="modelDeUsuario"
+        class="modelo">
+        <div class="modelo-conteine">
+            <div class="modelo-header">
+                <div>
+                    <h2>
+                        novo usuário
+                    </h2>
+                    <p>
+                        Cadastre um novo usuário
+                    </p>
+                </div>
+                <button
+                class="botao-fachar"
+                onclick="fecharCadastroUsuário()">
+                </button>
+            </div>
+            <form id="fomularioUsuario">
+                <div class="fomulario-grupo">
+                    <label for="idUsuario">
+                        ID
+                    </label>
+                    <input type="number" id="idUsuario" required>
+                </div>
+                <div class="formulario-grupo">
+                    <label for="nomeUsuario">
+                        nome
+                    </label>
+                    <input type="text" id="nomeUsuario" maxlength="20" placeholder="digite o nome" required>
+                </div>
+                <div class="formulario-grupo">
+                    <label for="emailUsuario">
+                            E-mail
+                        </label>
+
+                        <input
+                            type="email"id="emailUsuario" maxlength="20"placeholder="Digite o e-mail"required>
+                </div>
+                 <div class="formulario-grupo">
+                        <label for="departamentoUsuario">
+                            Departamento
+                        </label>
+
+                        <input
+                            type="text"id="departamentoUsuario"maxlength="15"placeholder="Ex: TI"required>
+                    </div>
+                    <div class="formulario-botoes">
+                        <button
+                        type="button"
+                        class="botao-cancelar"
+                        onclick="facharCadastroUsuario()">
+
+                        Cancelar
+
+                        </button>
+                        <button
+                        type="submit"
+                        class="botao-primeiro">
+
+                        cadastrar
+                        </button>
+                    </div>
+            </form>
+        </div>
+        <footer>
+            sistema de controle de Ferramentas
+        </footer>
+    </main>
+    <script src="Usuarios.js"></script>    
+
+</body>

@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Controle de Ferramentas</title>
+
+    <link rel="stylesheet" href="ferramenta.css">
+</head>
+
+<body>
+
+    <!-- MENU LATERAL -->
+    <aside class="sidebar">
+
+        <div class="logo">
+            <div class="logo-icon">🔧</div>
+
+            <div>
+                <h2>Controle</h2>
+                <span>de Ferramentas</span>
+            </div>
+        </div>
+
+
+        <nav class="menu">
+
+            <a href="InicialFerramenta.html" class="menu-item active">
+                Pagina inicial
+            </a>
+
+            <a href="Usuarios .html" class="menu-item">
+                Usuários
+            </a>
+
+            <a href="ferramentas.html" class="menu-item">
+                Ferramentas
+            </a>
+
+            <a href="Emprestimo.html" class="menu-item">
+                
+                Empréstimos
+            </a>
+
+        </nav>
+
+
+    </aside>
+
+
+    
+    <main class="main">
+
+        
+        <header class="topbar">
+
+            <div>
+                <h1>Pagina inicial</h1>
+                <p>Visão geral do sistema</p>
+            </div>
+
+            <div class="user-info">
+                <div class="user-icon">👤</div>
+
+                <div>
+                    <strong>Administrador</strong>
+                    <small>Usuário do sistema</small>
+                </div>
+            </div>
+
+        </header>
+
+
+        <!-- CARDS -->
+        <section class="cards">
+
+            <div class="card">
+
+                <div class="card-icon blue">
+                    👥
+                </div>
+
+                <div>
+                    <span>Usuários</span>
+                    <strong id="totalUsuarios">0</strong>
+                    <small>cadastrados</small>
+                </div>
+
+            </div>
+
+
+            <div class="card">
+
+                <div class="card-icon orange">
+                    🔧
+                </div>
+
+                <div>
+                    <span>Ferramentas</span>
+                    <strong id="totalFerramentas">0</strong>
+                    <small>cadastradas</small>
+                </div>
+
+            </div>
+
+
+            <div class="card">
+
+                <div class="card-icon green">
+                    ✓
+                </div>
+
+                <div>
+                    <span>Disponíveis</span>
+                    <strong id="totalDisponiveis">0</strong>
+                    <small>disponíveis para uso</small>
+                </div>
+
+            </div>
+
+
+            <div class="card">
+
+                <div class="card-icon red">
+                    📋
+                </div>
+
+                <div>
+                    <span>Empréstimos ativos</span>
+                    <strong id="totalEmprestimosAtivos">0</strong>
+                    <small>em andamento</small>
+                </div>
+
+            </div>
+
+        </section>
+
+
+        
+        <section class="dashboard-grid">
+
+
+        
+            <div class="panel">
+
+                <div class="panel-header">
+
+                    <div>
+                        <h2>Resumo do sistema</h2>
+                        <p>Informações gerais</p>
+                    </div>
+
+                </div>
+
+
+                <div class="summary">
+
+                    <div class="summary-item">
+                        <span>👥</span>
+
+                        <div>
+                            <p>Usuários cadastrados</p>
+                            <strong id="resumoUsuarios">0</strong>
+                        </div>
+                    </div>
+
+
+                    <div class="summary-item">
+                        <span>🔧</span>
+
+                        <div>
+                            <p>Total de ferramentas</p>
+                            <strong id="resumoFerramentas">0</strong>
+                        </div>
+                    </div>
+
+
+                    <div class="summary-item">
+                        <span>✓</span>
+
+                        <div>
+                            <p>Ferramentas disponíveis</p>
+                            <strong id="resumoDisponiveis">0</strong>
+                        </div>
+                    </div>
+
+
+                    <div class="summary-item">
+                        <span>📋</span>
+
+                        <div>
+                            <p>Empréstimos ativos</p>
+                            <strong id="resumoEmprestimos">0</strong>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div class="panel">
+
+                <div class="panel-header">
+
+                    <div>
+                        <h2>Últimos empréstimos</h2>
+                        <p>Movimentações recentes</p>
+                    </div>
+
+                </div>
+
+
+                <div class="table-container">
+
+                    <table>
+
+                        <thead>
+
+                            <tr>
+                                <th>ID</th>
+                                <th>Usuário</th>
+                                <th>Ferramenta</th>
+                                <th>Data</th>
+                                <th>Status</th>
+                            </tr>
+
+                        </thead>
+
+
+                        <tbody id="listaEmprestimos">
+
+                            <tr>
+                                <td colspan="5">
+                                    
+                                </td>
+                            </tr>
+
+                        </tbody>
+
+                    </table>
+
+                </div>
+
+            </div>
+
+        </section>
+        
+        <footer>
+
+            Sistema de Controle de Ferramentas
+
+        </footer>
+
+    </main>
+
+
+    <script src="ferramenta.js"></script>
+
+</body>
+
+</html>

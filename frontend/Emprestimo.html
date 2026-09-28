@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Controle de Ferramentas</title>
+    <link rel="stylesheet" href="Emprestimos.css">
+</head>
+<body>
+    <aside class="sidebar">
+        <div class="logo">
+            <div class="logo-icon">
+                🔧
+            </div>
+            <div>
+                <h2>Controle</h2>
+                <span>
+                    de Ferramentas
+                </span>
+            </div>
+        </div>
+       <nav class="menu">
+
+            <a href="InicialFerramenta.html" class="menu-item active">
+                Pagina inicial
+            </a>
+
+            <a href="Usuarios .html" class="menu-item">
+                Usuários
+            </a>
+
+            <a href="ferramentas.html" class="menu-item">
+                Ferramentas
+            </a>
+
+            <a href="Emprestimo.html" class="menu-item">
+                
+                Empréstimos
+            </a>
+
+        </nav>
+    </aside>
+    <main class="main">
+
+        <header class="topbar">
+            <div>
+                <h1>
+                    Empréstimos
+                </h1>
+                <p>
+                    Controle de empréstimos
+                </p>
+            </div>
+            <div class="user-info">
+                <div class="user-icon">
+                    👤
+                </div>
+                <div>
+                    <strong>
+                        Administrador
+                    </strong>
+                    <small>
+                        Usuário do sistema
+                    </small>
+                </div>
+            </div>
+        </header>
+
+        <section class="emprestimo-cards">
+            <div class="emprestimo-card">
+                <div>
+                    <span>
+                        Total de empréstimos
+                    </span>
+                    <strong id="totalEmprestimos">
+                        
+                    </strong>
+                    <small>
+                        empréstimos cadastrados
+                    </small>
+                </div>
+            </div>
+            <div class="emprestimo-card">
+                <div>
+                    <span>
+                        Empréstimos ativos
+                    </span>
+                    <strong id="totalAtivos">
+                        
+                    </strong>
+                    <small>
+                        ferramentas emprestadas
+                    </small>
+                </div>
+            </div>
+            <div class="emprestimo-card">
+                <div>
+                    <span>
+                        Devoluções
+                    </span>
+                    <strong id="totalDevolução">
+                        
+                    </strong>
+                    <small>
+                        ferramentas devolvidas
+                    </small>
+                </div>
+            </div>
+        </section>
+        <section class="emprestimo-painel">
+            <div class="emprestimo-header">
+                <div>
+                    <h2>
+                        Lista de empréstimos
+                    </h2>
+                    <p>
+                        Empréstimos cadastrados no sistema
+                    </p>
+                </div>
+                <button
+                class="botao-primeiro"
+                onclick="abriNovoEmprestimo()">
+
+                + Novo empréstimo
+
+                </button>
+            </div>
+            <div class="pesquisa">
+                <input
+                    type="text"
+                    id="campoPesquisaEmprestimo"
+                    placeholder="Pesquisar por usuário ou ferramenta"
+                    onkeyup="pesquisaEmprestimo()">
+
+            </div>
+            <div class="tabela-principal">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>Usuário</th>
+                            <th>Ferramenta</th>
+                            <th>Data do empréstimo</th>
+                            <th>Data de devolução</th>
+                            <th>Status</th>
+                        </tr>
+                    </thead>
+
+                    <tbody id="ListaEmprestimos">
+                    </tbody>
+                </table>
+            </div>
+        </section>
+        <div
+            id="modelDeEmprestimo"
+            class="modelo">
+
+            <div class="modelo-conteine">
+
+                <div class="modelo-header">
+                    <div>
+                        <h2>
+                            Novo empréstimo
+                        </h2>
+                        <p>
+                            Cadastre um novo empréstimo
+                        </p>
+                    </div>
+
+                  <button
+                    type="button"
+                    class="botao-fechar"
+                    onclick="fecharCadastro()">
+                    ×
+                    </button>
+                </div>
+                <form id="formularioEmprestimos">
+                    <div class="fromulario-grupo">
+                        <label for="idEmprestimo">
+                            ID
+                        </label>
+                        <input
+                            type="number"
+                            id="idEmprestimo"
+                            placeholder="Digite o ID do empréstimo"
+                            required>
+                    </div>
+                    <div class="fromulario-grupo">
+                        <label for="usuarioEmprestimo">
+                            Usuário
+                        </label>
+                        <input
+                            type="number"
+                            id="usuarioEmprestimo"
+                            placeholder="ID do usuário"
+                            required>
+                    </div>
+                    <div class="fromulario-grupo">
+                        <label for="ferramentasEmprestimo">
+                            Ferramenta
+                        </label>
+                        <input
+                            type="number"
+                            id="ferramentasEmprestimo"
+                            placeholder="ID da ferramenta"
+                            required>
+                    </div>
+                    <div class="fromulario-grupo">
+                        <label for="dataEmprestimo">
+                            Data do empréstimo
+                        </label>
+                        <input
+                            type="date"
+                            id="dataEmprestimo"
+                            required>
+                    </div>
+                    <div class="fromulario-grupo">
+                        <label for="datadevolução">
+                            Data de devolução
+                        </label>
+                        <input
+                            type="date"
+                            id="datadevolução">
+                    </div>
+                    <div class="fomulario-botoes">
+                        <button
+                            type="button"
+                            class="botao-cancelar"
+                            onclick="fecharCadastroEmprestimo()">
+                            Cancelar
+                        </button>
+                        <button
+                            type="submit"
+                            class="botao-primeiro">
+                            Cadastrar
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <footer>
+            Sistema de Controle de Ferramentas
+        </footer>
+    </main>
+    <script src="Emprestimos.js"></script>
+
+</body>
+
+</html>
