@@ -1,0 +1,6 @@
+.vscode/
+target/
+*.class
+*.log
+
+demo/src/main/resources/application.properties
